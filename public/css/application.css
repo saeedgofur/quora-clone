@@ -1,15 +1,18 @@
 body {
-	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCbxvnZzD9s9NWyXnqpWGAW42rb_e6z8nlcCScO-Nb-P9hE8hN);
+	background: url(/img/background.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-
+	text-shadow: 0 0 3px white;
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	color: rgb(21,0,255);
 }
 
 
-
+h1 {
+	text-shadow: 0 0 3px white;
+	align-self: center;
+}
 
 input[type=text] {
 
@@ -54,3 +57,38 @@ button {
     z-index: 1000;
     border-radius: 5px;
 }
+
+
+/*########################################################*/
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(78, 78, 79);
+}
+
+
+li a {
+    display: block;
+    width: 100px;
+}
+
+li {
+    float: top;
+}
+
+li >a {
+    display: block;
+    padding: 8px;
+    background-color: rgb(78, 78, 79);
+}
+
+li {
+    border-right: 0.5px solid rgb(82, 82, 82);
+    border-left: 0.5px solid rgb(82, 82, 82);
+}
+
+
+/*########################################################*/
