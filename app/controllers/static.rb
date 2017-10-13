@@ -31,6 +31,12 @@ post '/log_in' do
 end
 
 
+post '/logout' do
+	session[:user_id] = nil
+	redirect '/'
+end
+
+
 ######################
 
 post '/sendto_signup' do
