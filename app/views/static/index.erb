@@ -1,15 +1,36 @@
-<form action="/sendto_signup" method="post"> <button class="trans_button">Sign Up</button> </form>
+<form action="/sendto_signup" method="get"> <button class="trans_button">Sign Up</button> </form>
 
-<form action="/sendto_login" method="post"> <button class="trans_button">Log In</button> </form>
+<form action="/sendto_login" method="get"> <button class="trans_button">Log In</button> </form>
+
+<form action="/sendto_create_question" method="get"> <button class="trans_button">Ask Question</button> </form>
+
+<!-- #################### -->
+
+<br>
+
+
+<% if session[:user_id] == nil %>
+
+	<p class="mainpage_message1">You are not currently logged in</p>
+
+<% else %>
+	
+	<p class="mainpage_message2">You are logged in as <%= current_user[:username] %></p>
+
+<% end -%>
+
+<br>
+
+<!-- #################### -->
 
 <table class="table">
- <% User.all.each do |p| %>
+ <% User.all.each do |z| %>
     <tr>
-	  <td><h5><%= p.username %></h5></td>
+	  <td><h5><%= z.username %></h5></td>
 
-	  <td><h5><%= p.email %></h4></td>
+	  <td><h5><%= z.email %></h4></td>
 
-	  <td><h5><%= p.password_digest %></h4></td>
+	  <td><h5><%= z.password_digest %></h4></td>
  	</tr>
  <% end %>
 </table>
