@@ -1,0 +1,14 @@
+<h1>News-Feed</h1>
+
+	<% Question.all.each do |x| %>
+		<div class="newsfeed_box">
+			<h2><%= x.question_description %></h2>
+			<h4> Asked by: <%= x.user.username %> </h4>
+			<h4> Created at: <%= x.created_at %></h4>
+
+
+			<form action="/sendto_answer" method="get"> <button class="trans_button">Answer</button> </form>
+
+	 	</div>
+	 	<br>
+	<% end %>

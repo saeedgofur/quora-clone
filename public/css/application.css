@@ -2,19 +2,30 @@ body {
 	background: url(/img/background.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	text-shadow: 0 0 3px white;
+	text-shadow: 0 0 3px rgb(255, 153, 255);
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
-	color: rgb(21,0,255);
+	color: rgb(0, 0, 255);
 }
 
 
 h1 {
-	text-shadow: 0 0 3px white;
+	font-weight: bolder;
 	align-self: center;
 }
 
 /*######################*/
+
+.mainpage_message1{
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: 0 0 3px red;
+}
+
+.mainpage_message2{
+	font-weight: bold;
+	font-size: 20px;
+}
 
 .trans_button {
     background-color: rgba(79,187,255,0.7);
@@ -27,11 +38,6 @@ h1 {
     align-self: center;
 }
 
-/*
-.signup_button {
-    float: left;
-}
-*/
 
 .container {
     padding: 16px;
@@ -44,7 +50,7 @@ h1 {
     width: 60em;
     height: 40em;
     overflow: auto; 
-    background-color: rgba(255,0,255,0.4);
+    background-color: rgba(255,0,255,0.5);
     z-index: 1000;
     border-radius: 5px;
 }
@@ -83,6 +89,7 @@ li {
 	font-family: 'Montserrat', sans-serif;
 	color: rgb(21,0,255);
 	border: none;
+	cursor: pointer;
 }
 
 
@@ -90,7 +97,7 @@ li {
 
 /*########################################################*/
 
-#question_box {
+.create_question_box {
 	width: 30em;
     height: 20em;
     overflow: auto; 
@@ -98,4 +105,13 @@ li {
     z-index: 900;
     border-radius: 5px;
     margin: auto;
+}
+
+
+/*########################################################*/
+
+.newsfeed_box{
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
 }

@@ -1,0 +1,19 @@
+<h1>Create Question Page</h1>
+
+
+<form action="create_questions" method="post">
+	<div class="create_question_box">
+		
+		<h3> Welcome <%= current_user[:username] %> </h3>
+
+		<br>
+		<br>
+
+		<label><b>What is your question?</b></label>
+		<input type="text" placeholder="Enter Question" name="new_question">
+
+
+		<button type='submit' class="trans_button">Submit Question</button>
+
+	</div>
+</form>
