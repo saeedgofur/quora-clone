@@ -1,0 +1,19 @@
+
+<% a = Question.find_by(id: params[:id]) %>
+
+			<h2><%= a.question_description %></h2>
+			<h4> Asked by: <%= a.user.username %> </h4>
+			<h4> Created at: <%= a.created_at %></h4>
+			<hr class="dotted_line">
+			<br>
+
+<!-- #################### -->
+
+			<% b = Answer.where(question_id: params[:id]) %>
+			<% b.each do |z| %>
+				<h2 class="newsfeed_answer"><%= z.answer_description %></h2>
+				<h4>Answered by: <%= z.user.username %></h4>
+				<h4>Answered at: <%= z.created_at %></h4>
+				<hr class="dotted_line">
+				<br>
+			<% end -%>

@@ -34,7 +34,7 @@ post '/log_in' do
 end
 
 
-post '/logout' do
+get '/logout' do
 	session[:user_id] = nil
 	redirect '/'
 end
@@ -63,11 +63,46 @@ end
 
 ######################
 
+get '/questions/:id' do
+
+	erb :'static/questionprofile'
+
+end
+
+######################
+
+get '/questions/:id/sendto_answer' do
+
+	erb :'static/create_answerpage'
+
+end
+
+######################
+
 post '/create_questions' do
 
 	@question = current_user.questions.new(question_description: params[:new_question])
 	@question.save
 
 	redirect '/newsfeed'
+
+end
+
+post '/questions/:id/answer' do
+	@answer = Answer.new(question_id: params[:id], answer_description: params[:new_answer], user_id: current_user.id)
+	@answer.save
+
+	redirect '/newsfeed'
+end
+
+######################
+
+get '/user' do
+
+	if session[:user_id] == nil
+		redirect '/'
+	else
+		erb :"static/profilepage"
+	end
 
 end

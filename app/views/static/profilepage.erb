@@ -1,0 +1,51 @@
+<h1>Profile</h1>
+
+<!-- ################### -->
+
+<div>
+    <%= current_user.username %><br>
+    Member since <%= current_user.created_at %>
+</div>
+<br>
+
+
+
+<div>
+    <h3>Questions asked by <%= current_user.username %>:</h3>
+
+    <button class="trans_button profile_questionlist_button">Show/Hide</button>
+
+    <ol class="questionlist">
+    <% current_user.questions.each do |x| %>
+        <li>
+            <p><%= x.question_description %></p>
+        </li>
+
+
+        <br>
+    <% end %>
+
+    </ol>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h3>Answers replied by <%= current_user.username %>:</h3>
+
+    <button class="trans_button profile_answerlist_button">Show/Hide</button>
+
+    <ol class="answerlist">
+    <% current_user.answers.each do |y| %>
+        <li> <p>(<%= y.answer_description %>) to the question (<%= y.question.question_description %>)</p>
+        	<br>
+        </li>
+        <br>
+       
+    <% end %>
+    </ol>
+
+
+</div>

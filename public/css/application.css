@@ -2,7 +2,7 @@ body {
 	background: url(/img/background.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	text-shadow: 0 0 3px rgb(255, 153, 255);
+	text-shadow: 0 0 4px rgb(89, 89, 89);
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	color: rgb(0, 0, 255);
@@ -80,6 +80,10 @@ li {
     float: left;
 }
 
+.log_status {
+	float: right;
+}
+
 .humpty {
     display: block;
     padding: 8px;
@@ -115,3 +119,16 @@ li {
 	border-width: 2px;
 	border-color: black;
 }
+
+.newsfeed_answer{
+	font-style: italic;
+	color: rgb(0, 153, 204);
+}
+/*########################################################*/
+.dotted_line {
+    border-width: 2.5px;
+    border-style: dotted; 
+    color: white;
+}
+
+

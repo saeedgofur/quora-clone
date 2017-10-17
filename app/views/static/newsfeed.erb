@@ -1,13 +1,31 @@
 <h1>News-Feed</h1>
 
-	<% Question.all.each do |x| %>
+	<% Question.order(created_at: :desc).each do |x| %>
 		<div class="newsfeed_box">
 			<h2><%= x.question_description %></h2>
 			<h4> Asked by: <%= x.user.username %> </h4>
 			<h4> Created at: <%= x.created_at %></h4>
 
+			<br>
+			<hr>
 
-			<form action="/sendto_answer" method="get"> <button class="trans_button">Answer</button> </form>
+<!-- #################### -->
+
+			<% a = Answer.where(question_id: x.id) %>
+			<% a.each do |z| %>
+				<h2 class="newsfeed_answer"><%= z.answer_description %></h2>
+				<h4>Answered by: <%= z.user.username %></h4>
+				<h4>Created at: <%= z.created_at %></h4>
+				<hr class="dotted_line">
+				<br>
+			<% end -%>
+
+<!-- #################### -->
+
+			<form action="/questions/<%= x.id %>" method="get"> <button class="trans_button">See Question</button> </form>
+
+
+			<form action="/questions/<%= x.id %>/sendto_answer" method="get"> <button class="trans_button">Answer</button> </form>
 
 	 	</div>
 	 	<br>

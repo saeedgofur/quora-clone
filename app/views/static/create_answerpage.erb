@@ -1,0 +1,17 @@
+<h1>Create Answer</h1>
+
+<form action="/questions/<%= params[:id] %>/answer" method='post'>
+
+	<h3> Welcome <%= current_user[:username] %> </h3>
+
+	<br>
+	<br>
+
+	<label><b>What is your answer?</b></label>
+	<input type="text" placeholder="Enter Question" name="new_answer">
+
+	<button type="submit" class="trans_button">Submit Answer</button>
+
+</form>
+	
+</form>

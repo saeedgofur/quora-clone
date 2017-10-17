@@ -14,7 +14,6 @@
 	<p class="mainpage_message1">You are not currently logged in</p>
 
 <% else %>
-	
 	<p class="mainpage_message2">You are logged in as <%= current_user[:username] %></p>
 
 <% end -%>
@@ -23,14 +22,3 @@
 
 <!-- #################### -->
 
-<table class="table">
- <% User.all.each do |z| %>
-    <tr>
-	  <td><h5><%= z.username %></h5></td>
-
-	  <td><h5><%= z.email %></h4></td>
-
-	  <td><h5><%= z.password_digest %></h4></td>
- 	</tr>
- <% end %>
-</table>
