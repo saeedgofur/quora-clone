@@ -6,7 +6,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 
 # Ruby Version
-# ruby "2.2.1"
+ ruby "2.3.4"
 gem 'byebug'
 
 # Adding Sinatra Drivers
